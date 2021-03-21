@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@test.test'
         ]);
 
+        \App\Models\User::factory(4)->create();
         \App\Models\Product::factory(25)->create();
     }
 }

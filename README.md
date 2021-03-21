@@ -2,10 +2,12 @@
 - After cloning this repo. Create a database with the name "app_exam_flowerstore".
 - rename the ".env.example" to ".env"
 - Run the following commands:
+
 ```bash
 composer install
 php artisan key:generate
 php artisan migrate --seed
+php artisan storage:link
 php artisan serve
 ```
 
