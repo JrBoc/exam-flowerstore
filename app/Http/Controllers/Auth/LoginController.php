@@ -21,4 +21,9 @@ class LoginController extends Controller
     {
         return redirect()->route('login');
     }
+
+    public function showLoginForm()
+    {
+        return view('pages.auth.login');
+    }
 }

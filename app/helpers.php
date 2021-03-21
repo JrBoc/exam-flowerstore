@@ -4,8 +4,9 @@ use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Container\BindingResolutionException;
 
 /**
+ * Returns current logged user
  *
- * @return Authenticatable|App\Models\User|null
+ * @return App\Models\User|null
  * @throws BindingResolutionException
  */
 function current_user()

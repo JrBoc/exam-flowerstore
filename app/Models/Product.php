@@ -11,18 +11,17 @@ class Product extends Model
 
     protected $guarded = [];
 
-    protected static function booted()
-    {
-        /**
-         * Attached user when a product is being created
-         */
-        static::creating(function ($model) {
-            $model->created_by = current_user()->id;
-        });
-    }
+    protected $appends = [
+        'readable_price',
+    ];
 
     public function createdBy()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class, 'created_by', 'id');
+    }
+
+    public function getReadablePriceAttribute()
+    {
+        return number_format($this->price, 2);
     }
 }

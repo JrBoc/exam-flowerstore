@@ -9,4 +9,5 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require('jasny-bootstrap');
 } catch (e) {}
