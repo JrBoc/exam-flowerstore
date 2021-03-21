@@ -23,6 +23,10 @@ class Edit extends Component
         'photo' => 'nullable|image',
     ];
 
+    protected $validationAttributes = [
+        'product.name' => 'product name',
+    ];
+
     public function render()
     {
         return view('livewire.product.edit');
