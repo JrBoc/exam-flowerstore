@@ -22,3 +22,7 @@ Javascript Libraries used:
 - jQuery
 - Bootstrap (includes CSS)
 - Jansy Bootstrap
+
+Login using or register an account:
+- user@test.test
+- password
