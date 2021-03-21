@@ -31,7 +31,16 @@
                                 </small>
                             </div>
                             <div>
-                                <button class="btn btn-outline-primary">View</button>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Actions
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right text-right shadow" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item btn-view" type="button" value="{{ $product->id }}">View</button>
+                                        <button class="dropdown-item btn-edit" type="button" value="{{ $product->id }}">Edit</button>
+                                        <button class="dropdown-item btn-delete" type="button" value="{{ $product->id }}">Delete</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -48,4 +57,5 @@
     </div>
     <!-- Other Related Livewire Components -->
     @livewire('product.create')
+    @livewire('product.edit')
 </div>
