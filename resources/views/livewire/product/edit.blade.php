@@ -47,7 +47,7 @@
                     @endif
                     <div class="form-group">
                         <label for="description">Description:</label>
-                        <textarea wire:model.defer="product.description" class="form-control  @error('product.description') is-invalid @enderror" placeholder="Description" {{ $edit_mode ? '' : 'disabled' }}></textarea>
+                        <textarea wire:model.defer="product.description" class="form-control  @error('product.description') is-invalid @enderror" rows="10" placeholder="Description" {{ $edit_mode ? '' : 'disabled' }}></textarea>
                         @include('components.error', ['field' => 'product.description'])
                     </div>
                     <div class="form-group">

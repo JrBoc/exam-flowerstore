@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Description:</label>
-                        <textarea wire:model.defer="description" class="form-control  @error('description') is-invalid @enderror" placeholder="Description"></textarea>
+                        <textarea wire:model.defer="description" class="form-control  @error('description') is-invalid @enderror" rows="10" placeholder="Description"></textarea>
                         @include('components.error', ['field' => 'description'])
                     </div>
                     <div class="form-group">
